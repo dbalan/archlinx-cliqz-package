@@ -1,7 +1,7 @@
 jobs:
   build:
     docker:
-      - image: base/archlinux
+      - image: base/archlinux:latest
     steps:
       - checkout
       - run:
