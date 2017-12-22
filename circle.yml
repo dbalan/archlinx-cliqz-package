@@ -3,11 +3,10 @@ jobs:
     docker:
       - image: base/archlinux
     steps:
-      - prep
+      - checkout
       - run:
           name: Update package cache
           command: pacman -Syu --noconfirm
       - run:
           name: Print the Current Time
           command: date
-          
