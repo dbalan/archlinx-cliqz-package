@@ -9,7 +9,7 @@ jobs:
           command: bash setup_system.sh
       - run:
           name: install package
-          command: sudo -u build build_package.sh
+          command: sudo -u build ./build_package.sh
       - run:
           name: Print the Current Time
           command: date
