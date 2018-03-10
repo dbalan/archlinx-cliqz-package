@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: Update package cache
-          command: pacman -Syu --noconfirm
+          command: bash build_package.sh
       - run:
           name: Print the Current Time
           command: date
