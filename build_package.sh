@@ -11,3 +11,5 @@ git clone https://aur.archlinux.org/yaourt.git
 cd yaourt
 makepkg -si --noconfirm
 cd ..
+
+yaourt -S cliqz --noconfirm
