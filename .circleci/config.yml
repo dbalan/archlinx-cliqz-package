@@ -5,8 +5,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Update package cache
-          command: bash build_package.sh
+          name: Setup system
+          command: bash setup_system.sh
       - run:
           name: Print the Current Time
           command: date
