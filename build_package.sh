@@ -9,6 +9,8 @@ useradd -m -s /bin/bash -d /build build
 echo "build ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 
+cd /build
+
 git clone https://aur.archlinux.org/package-query.git
 cd package-query
 sudo -u build makepkg -si --noconfirm
