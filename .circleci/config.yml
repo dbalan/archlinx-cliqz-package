@@ -4,12 +4,19 @@ jobs:
       - image: base/archlinux:latest
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - pacman-cache
       - run:
           name: Setup system
           command: bash setup_system.sh
       - run:
           name: install package
           command: sudo -u build ./build_package.sh
+      - save_cache:
+          key: pacman-cache
+          paths:
+            - "/var/cache/pacman/pkg/"
       - run:
           name: Print the Current Time
           command: date
